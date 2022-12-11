@@ -1,0 +1,14 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_NAME=Yogesh
+    ports:
+      - "8080:80"
+    # environment:
+    #   - REACT_APP_NAME=Yogesh
+    # env_file:
+    #   - ./.env
